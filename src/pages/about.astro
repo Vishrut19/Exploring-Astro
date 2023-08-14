@@ -1,6 +1,8 @@
 ---
-import Header from '../components/Header.astro';
-import '../styles/global.css'
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/global.css";
 const pageTitle = "About Me!";
 
 const identity = {
@@ -23,7 +25,7 @@ const textCase = "uppercase";
 ---
 
 <body>
-  <Header/>
+  <Header />
   <h1>{pageTitle}</h1>
   <p>Here are a few facts about me:</p>
   <ul>
@@ -43,21 +45,28 @@ const textCase = "uppercase";
   </ul>
   {happy && <p>I am happy to be learning AStro!</p>}
   {finished && <p>I finished this tutorial!</p>}
-  {goal === 3 ? <p>My Goal is to finish in 3 days.</p> : <p>My Goal is not to finish in  3 days.</p>}
-
+  {
+    goal === 3 ? (
+      <p>My Goal is to finish in 3 days.</p>
+    ) : (
+      <p>My Goal is not to finish in 3 days.</p>
+    )
+  }
+  <Footer />
+  <script>
+    import "../scripts/menu.js";
+  </script>
 </body>
 
-<style define:vars={{skillColor, fontWeight, textCase}}>
-	h1{
-		color: purple;
-		font-size: 4rem;
-	}
+<style define:vars={{ skillColor, fontWeight, textCase }}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
 
-	.skill{
-		color: var(--skillColor);
-		font-weight: var(--fontWeight);
-		text-transform: var(--textCase);
-	}
-
-
-  </style>
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
