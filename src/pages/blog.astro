@@ -1,14 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Header from "../components/Header.astro";
 import "../styles/global.css"
+const pageTitle = 'Blog Page'
 ---
-
+<Header/>
 <body>
-    <a href="/">HOME</a>
-    <a href="/about/">ABOUT PAGE</a>
-    <a href="/blog/">BLOG PAGE</a>
-    <h1>Blog Page</h1>
+	<h1>{pageTitle}</h1>
     <p>Here, I will share my update about whatever I have learned in Astro.</p>
     <ul>
         <li>
